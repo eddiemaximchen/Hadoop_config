@@ -1,21 +1,21 @@
-physical  computer resource		CPU	12		CPU	84				
+physical  computer resource CPU	12 memory 64G				
 
-no.1	a1	CPU	6	  50.00%						
+no.1	a1	CPU	6	50.00%						
 	a1	memory	24	70.00%						
 	w1	CPU	6							
-	w1	memory	24		vmcreate	mem/CPU	2			
-no.2	m1	CPU	6			mem/vm	16	max		
+	w1	memory	24		per VM	        mem/CPU	2			
+no.2	m1	CPU	6			        mem/vm	16 max		
 	m1	memory	24							
-	w2	CPU	6		      yarn.nodemanager.resource.cpu-vcores	84		
+	w2	CPU	6		      yarn.nodemanager.resource.cpu-vcores	        84		
 	w2	memory	24		yarn.nodemanager.resource.memory			336	max	
 no.3	m2	CPU	6		  yarn.nodemanager.resource.memory			268.8	min	
-	m2	memory	24		container	number	                    60		
+	m2	memory	24		container	number	                                60		
 	w3	CPU	6		      yarn.scheduler.minimum-allocation			5.6	max	mapreduce.reduce.memory
 	w3	memory	24		yarn.scheduler.maximum-allocation			4.48	min	maperduce.reduce.java.opts
-no.4	m3	CPU	6		  yarn.scheduler.minimum-allocation-vcores			2CPU		
-	m3	memory	24		mapreduce.map.memory			4.48		
-	w4	CPU	6		      mapreduce.java.opts			3		
-	w4	memory	24		dfs.replication			3		
+no.4	m3	CPU	6		  yarn.scheduler.minimum-allocation-vcores	        2CPU		
+	m3	memory	24		mapreduce.map.memory			                4.48		
+	w4	CPU	6		mapreduce.java.opts			                3		
+	w4	memory	24		dfs.replication	     		                        3		
 no.5	w5	CPU	6							
 	w5	memory	24							
 	w6	CPU	6							
