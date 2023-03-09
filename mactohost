@@ -1,0 +1,27 @@
+# Default Cluster
+00:00 x1 none
+00:01 x2 VMware
+00:02 x3 VMware
+00:03 a1 admin
+00:04 m1 master
+00:05 m2 master
+00:06 m3 master
+00:07 w1 worker
+00:08 w2 worker
+00:09 w3 worker
+# DT d1 Cluster
+70:2D d1a1 admin d1a1.45.zip d1/us.d1a1 192.168.39.40
+70:37 d1m1 master d1m1.55.zip d1/us.d1m1 192.168.39.50
+70:41 d1m2 master d1m2.65.zip d1/us.d1m2 192.168.39.60
+70:73 d1m3 master d1m3.115.zip d1/us.d1m3 192.168.39.110
+70:34 d1s1 server
+70:87 d1w1 worker d1w1.135.zip d1/us.d1w1 192.168.39.130
+70:9B d1w2 worker d1w2.155.zip d1/us.d1w2 192.168.39.150
+70:A5 d1w3 worker d1w3.165.zip d1/us.d1w3 192.168.39.160
+70:2E d1w4 worker d1w4.46.zip d1/us.d1w4 192.168.39.40
+70:38 d1w5 worker d1w5.56.zip d1/us.d1w5 192.168.39.50
+70:42 d1w6 worker d1w6.66.zip d1/us.d1w6 192.168.39.60
+70:74 d1w7 worker d1w7.116.zip d1/us.d1w7 192.168.39.110
+70:88 d1w8 worker d1w8.136.zip d1/us.d1w8 192.168.39.130
+70:9C d1w9 worker d1w9.156.zip d1/us.d1w9 192.168.39.150
+70:A6 d1w10 worker d1w10.166.zip d1/us.d1w10 192.168.39.160
