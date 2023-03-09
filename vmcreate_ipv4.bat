@@ -41,6 +41,9 @@ REM 修改 VM 的 MAC Address 必要設定
 set RSADR1='ethernet0.generatedAddressOffset = \"0\"'
 set RSADR2='ethernet0.addressType = \"generated\"' , 'ethernet0.addressType = \"static\"'
 
+REM 將 VM 網路模式設為 bridge 橋接模式
+set RSTYPE='ethernet0.connectionType = \"nat\"' , 'ethernet0.connectionType = \"bridge\"'
+
 REM 啟動 US2204 虛擬主機
 "C:\Program Files (x86)\VMware\VMware Player\vmrun" start "C:\Users\%USERNAME%\CNT.2023.v4.5\US2204_01\US2204.vmx" > nul
 timeout /t 60 > nul
@@ -98,7 +101,7 @@ if exist %CN%mactohost (
 
         mkdir %CN%\!x! > nul
         xcopy /E /Y C:\Users\%USERNAME%\CNT.2023.v4.5\US2204_01 %CN%\!x!\ > nul
-        powershell -Command "(gc %CN%\!x!\US2204.vmx) -replace "!RS!" -replace "!RSMAC!" -replace "%RSMMAX%" -replace "%RSADR1%" -replace "%RSADR2%"  | Out-File -Encoding "UTF8" vm.temp"
+        powershell -Command "(gc %CN%\!x!\US2204.vmx) -replace "!RS!" -replace "!RSMAC!" -replace "%RSMMAX%" -replace "%RSTYPE%" -replace "%RSADR1%" -replace "%RSADR2%"  | Out-File -Encoding "UTF8" vm.temp"
 
         del /Q %CN%\!x!\US2204.vmx
         copy /Y vm.temp %CN%\!x!\US2204.vmx > nul
